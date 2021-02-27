@@ -1,6 +1,15 @@
 import React from "react";
 
-function Table() {
+function Table(props) {
+    const employees = props.employeesArr;
+    const tableData = employees.map((employee) =>
+        <tr>
+            <td>{employee.first}</td>
+            <td>{employee.last}</td>
+            <td>{employee.email}</td>
+            <td>{employee.balance}</td>
+        </tr>
+    )
     return (
         <table className="table">
             <thead>
@@ -12,12 +21,7 @@ function Table() {
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>John</td>
-                    <td>Doe</td>
-                    <td>john@example.com</td>
-                    <td>3000</td>
-                </tr>
+                {tableData}
             </tbody>
         </table>
     );
