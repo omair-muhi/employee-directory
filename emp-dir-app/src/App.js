@@ -28,10 +28,18 @@ class App extends React.Component {
         }));
     }
     handleFilterClick() {
-        const employees = this.state.employees.filter(employee => !employee.email.includes("@gmail.com"));
+        if (!this.state.isFiltered) {
+            const employees = this.state.employees.filter(employee => employee.email.includes("@gmail.com"));
+            this.setState(state => ({
+                employees
+            }));
+        } else {
+            this.setState(state => ({
+                employees
+            }));
+        }
         this.setState(state => ({
             isFiltered: !state.isFiltered,
-            employees
         }));
     }
     render() {
