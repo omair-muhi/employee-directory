@@ -17,8 +17,14 @@ class App extends React.Component {
         this.handleFilterClick = this.handleFilterClick.bind(this);
     }
     handleSortClick() {
+        const employees = this.state.employees.sort((a, b) => {
+            if (a.last < b.last) return -1;
+            else if (a.last > b.last) return 1;
+            else return 0;
+        });
         this.setState(state => ({
-            isSorted: !state.isSorted
+            isSorted: !state.isSorted,
+            employees
         }));
     }
     handleFilterClick() {
