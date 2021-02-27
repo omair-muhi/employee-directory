@@ -20,6 +20,7 @@ This is a React-based web-application.
 
 ## Credits
 * UoT FSF Bcamp - this template
+* Week-19:01-Activities:16-FriendRefactor
 
 ## License
 
