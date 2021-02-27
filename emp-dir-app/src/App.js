@@ -10,7 +10,8 @@ class App extends React.Component {
         super(props);
         this.state = {
             isSorted: false,
-            isFiltered: false
+            isFiltered: false,
+            employees
         }
         this.handleSortClick = this.handleSortClick.bind(this);
         this.handleFilterClick = this.handleFilterClick.bind(this);
@@ -21,8 +22,10 @@ class App extends React.Component {
         }));
     }
     handleFilterClick() {
+        const employees = this.state.employees.filter(employee => !employee.email.includes("@gmail.com"));
         this.setState(state => ({
-            isFiltered: !state.isFiltered
+            isFiltered: !state.isFiltered,
+            employees
         }));
     }
     render() {
@@ -37,7 +40,7 @@ class App extends React.Component {
                         {this.state.isFiltered ? 'Show' : 'Filter'}
                     </button>
                 </div>
-                <Table employeesArr={employees}></Table>
+                <Table employeesArr={this.state.employees}></Table>
             </Wrapper >
         );
     }
