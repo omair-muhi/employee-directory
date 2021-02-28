@@ -1,22 +1,18 @@
 # Employee Directory
 
 ## Description 
-This is a React-based web-application.
+This is a React-based web-application for displaying a listing of employees. The directory can be sorted by last name and filtered to show employees with GMAIL addresses.
 
 ## Table of Contents (Optional)
 
 * [Usage](#usage)
-* [Tests](#tests)
 * [Credits](#credits)
 * [License](#license)
 
 ## Usage 
-* To install: 
-* To run: 
-* Access at: 
-* Screenshot:
-
-## Tests
+* Access at: https://omair-muhi.github.io/employee-directory/
+* Screenshot: 
+![Employee Director main screen!](./landing-page.png)
 
 ## Credits
 * UoT FSF Bcamp - this template
