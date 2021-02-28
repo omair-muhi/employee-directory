@@ -2,8 +2,8 @@ import React from "react";
 
 function Table(props) {
     const employees = props.employeesArr;
-    const tableData = employees.map((employee) =>
-        <tr>
+    const tableData = employees.map((employee, index) =>
+        <tr key={index}>
             <td>{employee.first}</td>
             <td>{employee.last}</td>
             <td>{employee.email}</td>

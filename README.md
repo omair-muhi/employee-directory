@@ -22,6 +22,7 @@ This is a React-based web-application.
 * UoT FSF Bcamp - this template
 * Week-19:01-Activities:16-FriendRefactor
 * Week-19:01-Activities:20-Stu_AJAX
+* ReactJS official docs
 
 ## License
 
